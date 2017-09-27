@@ -192,6 +192,10 @@ public class Example {
             Issue subtask = newIssue.createSubtask()
                 .field(Field.SUMMARY, "replace lightbulb")
                 .execute();
+                            
+            /* Delete an issue. */
+            /* true if you want delete sub-task, false if you don't want */
+            newIssue.delete(true);
 
             /* Search for issues */
             Issue.SearchResult sr = jira.searchIssues("assignee=batman");
